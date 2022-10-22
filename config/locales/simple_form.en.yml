@@ -1,14 +1,14 @@
 en:
   simple_form:
     placeholders:
-      quote:
+      wishlist:
         name: Name of your wishlist
     labels:
-      quote:
+      wishlist:
         name: Name
 
   helpers:
     submit:
-      quote:
+      wishlist:
         create: Create wishlist
         update: Update wishlist

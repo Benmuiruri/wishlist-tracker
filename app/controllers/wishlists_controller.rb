@@ -45,5 +45,4 @@ class WishlistsController < ApplicationController
   def wishlist_params
     params.require(:wishlist).permit(:name)
   end
-  end
 end

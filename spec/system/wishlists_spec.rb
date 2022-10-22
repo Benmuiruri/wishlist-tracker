@@ -6,7 +6,7 @@ RSpec.describe 'Wishlists', type: :system do
   end
 
   scenario 'User creates a new wishlist' do
-    visit root_path
+    visit wishlists_path
     click_link 'New Wishlist'
     fill_in 'Name', with: 'My Wishlist'
     click_button 'Create Wishlist'

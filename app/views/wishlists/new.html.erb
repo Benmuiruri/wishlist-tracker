@@ -1,0 +1,8 @@
+<main class="container">
+  <%= link_to sanitize("&larr; Back to wishlist board"), wishlists_path %>
+  <div class="header">
+    <h1>New Wishlist</h1>
+  </div>
+
+  <%= render 'form', wishlist: @wishlist %>
+</main>

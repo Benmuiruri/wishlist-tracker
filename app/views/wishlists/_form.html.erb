@@ -1,4 +1,4 @@
-<% simple_form_for wishlist, html: { class: "wishlist form" } do |f| %>
+<%= simple_form_for wishlist, html: { class: "wishlist form" } do |f| %>
   <% if wishlist.errors.any? %>
     <div class="error-message">
       <%= quote.errors.full_messages.to_sentence.capitalize %>

@@ -1,7 +1,7 @@
 # This will guess the Wishlist class
 
 FactoryBot.define do
-  sequence :name do |n|
-    "My Wishlist #{n}"
+  factory :wishlist do
+    name { "My Wishlist" }
   end
 end

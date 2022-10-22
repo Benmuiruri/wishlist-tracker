@@ -108,6 +108,8 @@ GEM
       activesupport (>= 5.0.0)
     jsbundling-rails (1.0.3)
       railties (>= 6.0.0)
+    launchy (2.5.0)
+      addressable (~> 2.7)
     loofah (2.19.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -236,6 +238,7 @@ DEPENDENCIES
   factory_bot_rails
   jbuilder
   jsbundling-rails
+  launchy (~> 2.4, >= 2.4.3)
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.3, >= 7.0.3.1)

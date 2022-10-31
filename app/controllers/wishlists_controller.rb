@@ -17,7 +17,7 @@ class WishlistsController < ApplicationController
     @wishlist = Wishlist.new(wishlist_params )
 
     if @wishlist.save
-      redirect_to @wishlist, notice: "Wishlist was successfully created."
+      redirect_to wishlists_path, notice: "Wishlist was successfully created."
     else 
       render :new, status: :unprocessable_entity
     end
@@ -25,7 +25,7 @@ class WishlistsController < ApplicationController
 
   def update
     if @wishlist.update(wishlist_params)
-      redirect_to @wishlist, notice: "Wishlist was successfully updated."
+      redirect_to wishlists_path, notice: "Wishlist was successfully updated."
     else 
       render :edit, status: :unprocessable_entity
     end

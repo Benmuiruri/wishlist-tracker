@@ -1,7 +1,9 @@
-<div class="wishlist">
-  <%= link_to wishlist.name, wishlist_path(wishlist) %>
-  <div class="wishlist__actions">
-    <%= button_to "Delete", wishlist_path(wishlist), method: :delete, class: "btn btn--light" %>
-    <%= link_to "Edit", edit_wishlist_path(wishlist), class: "btn btn--light" %>
+<%= turbo_frame_tag "wishlist_#{wishlist.id}" do %>
+  <div class="wishlist">
+    <%= link_to wishlist.name, wishlist_path(wishlist) %>
+    <div class="wishlist__actions">
+      <%= button_to "Delete", wishlist_path(wishlist), method: :delete, class: "btn btn--light" %>
+      <%= link_to "Edit", edit_wishlist_path(wishlist), class: "btn btn--light" %>
+    </div>
   </div>
-</div>
+<% end %>

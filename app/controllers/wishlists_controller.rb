@@ -2,7 +2,7 @@ class WishlistsController < ApplicationController
   before_action :set_wishlist, only: %i[show edit update destroy]
 
   def index
-    @wishlists = Wishlist.all
+    @wishlists = Wishlist.ordered
   end
 
   def show; end

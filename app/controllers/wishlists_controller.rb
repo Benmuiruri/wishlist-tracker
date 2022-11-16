@@ -17,7 +17,10 @@ class WishlistsController < ApplicationController
     @wishlist = Wishlist.new(wishlist_params)
 
     if @wishlist.save
-      redirect_to wishlists_path, notice: 'Wishlist was successfully created.'
+      respond_to do |format|
+        format.html { redirect_to @wishlist, notice: 'Wishlist was successfully created.' }
+        format.turbo_stream
+      end
     else
       render :new, status: :unprocessable_entity
     end

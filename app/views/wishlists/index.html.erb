@@ -3,8 +3,13 @@
     <h1>Wishlists</h1>
     <%= link_to "New Wishlist",
                 new_wishlist_path,
-                class: "btn btn--primary" %>
+                class: "btn btn--primary",
+                data: { turbo_frame: dom_id(Wishlist.new) } %>
   </div>
 
-  <%= render @wishlists %>
+  <%= turbo_frame_tag Wishlist.new %>
+
+  <%= turbo_frame_tag "wishlists" do %>
+    <%= render @wishlists %>
+  <% end %>
 </main>

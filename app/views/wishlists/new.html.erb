@@ -3,6 +3,8 @@
   <div class="header">
     <h1>New Wishlist</h1>
   </div>
-
-  <%= render "form", wishlist: @wishlist %>
+  
+  <%= turbo_frame_tag @wishlist do %>
+    <%= render "form", wishlist: @wishlist %>
+  <% end %>
 </main>

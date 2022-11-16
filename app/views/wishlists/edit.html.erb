@@ -4,5 +4,7 @@
     <h1>Edit Wishlist</h1>
   </div>
 
-  <%= render 'form', wishlist: @wishlist %>
+  <%= turbo_frame_tag @wishlist do %>
+    <%= render 'form', wishlist: @wishlist %>
+  <% end %>
 </main>

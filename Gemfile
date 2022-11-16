@@ -59,6 +59,7 @@ group :development, :test do
   gem "factory_bot_rails"
   gem "capybara"
   gem 'launchy', '~> 2.4', '>= 2.4.3'
+  gem "pry"
 end
 
 group :development do

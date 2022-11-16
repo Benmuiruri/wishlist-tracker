@@ -1,6 +1,6 @@
-<%= turbo_frame_tag "wishlist_#{wishlist.id}" do %>
+<%= turbo_frame_tag wishlist do %>
   <div class="wishlist">
-    <%= link_to wishlist.name, wishlist_path(wishlist) %>
+    <%= link_to wishlist.name, wishlist_path(wishlist), data: { turbo_frame: "_top"} %>
     <div class="wishlist__actions">
       <%= button_to "Delete", wishlist_path(wishlist), method: :delete, class: "btn btn--light" %>
       <%= link_to "Edit", edit_wishlist_path(wishlist), class: "btn btn--light" %>
